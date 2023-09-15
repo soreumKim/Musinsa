@@ -11,10 +11,10 @@ const ProductAll = () => {
         //getProduct 함수를 통해서 API를 호출할 때에 쿼리에 있는 값을 넣어줌
         let searchQuery = query.get('q')||"";
         //로컬에 설치된 json-server로 데이터를 불러와서 보여주는 주소
-        let url = `http://localhost:5000/products/?q=${searchQuery}`
+        //let url = `http://localhost:5000/products/?q=${searchQuery}`
 
         //my-json-server에서 자료 가져오기
-        //let url = `https://my-json-server.typicode.com/soreumKim/Musinsa/products/?q=${searchQuery}`
+        let url = `https://my-json-server.typicode.com/soreumKim/Musinsa/products/?q=${searchQuery}`
         let response = await fetch(url); 
         let data = await response.json();
         console.log(data)
